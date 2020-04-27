@@ -6,4 +6,14 @@ from app import app
 
 def index():
     user = {'username':'Priest Ambrose'}
-    return render_template('index.html', title='Home', user=user)
+    posts = [
+        {
+            'author':{'username':'John'},
+            'body':'Beautiful day in Jordanville'
+        },
+        {
+            'author':{'username':'Susan'},
+            'body':'The prayers were so good at the monastery!'
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
