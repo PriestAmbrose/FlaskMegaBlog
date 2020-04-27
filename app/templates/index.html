@@ -1,6 +1,10 @@
 <html>
 	<head>
+		{% if titel %}
 		<title> {{ title }} - FLASK MEGA BLOG </title>
+		{% else %}
+		<title> Welcome to Megablog </title>
+		{% endif %}
 	</head>
 	<body>
 		<h1> This is for you, dear {{ user.username }}.</h1>
